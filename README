@@ -1,0 +1,54 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task1 - otp
+
+Se parcurge sirul plaintext folosind registrul 
+ecx drept index. Caracterele se cripteaza pe
+rand, folosind instructiunea "xor".
+-------------------------------------------------
+
+Task2 - caesar
+
+Se parcurge sirul plaintext folosind registrul
+ecx drept index. 
+Se verifica, pe rand,tipul de
+caracter (litera mica, litera mare, orice
+altceva) prin doua instructiuni cmp si doua
+instructiuni jge. 
+Dupa adaugarea "cheii"
+literele se deplaseaza "circualr" prin scaderi
+repetate de cate 26 de unitati (sunt 26 de 
+litere distincte in codul ascii). 
+Rezultatul este construit caracater cu caracter
+in registrul edx.
+-------------------------------------------------
+
+Task3 - vigenere
+
+Similar cu task-urile 1 si 2, se parcurge sirul
+plaintext cu ajutorul unui registru (ecx).
+Intrucat cheia poate fi mai scurta decat textul
+se foloseste un 'contor' auxiliar, stocat in
+[ebp-4]. 
+Se tine cont de faptul ca numai
+modificarea literelor duce la incrementarea
+contorului pentru cheie. 
+Se foloseste "variabila"
+auxiliara [ebp-8] pentru lucrul cu 2 contoare
+diferite. 
+-------------------------------------------------
+
+Task4 - my_strstr
+
+Se folosesc doua "for-uri" imbricate: unul pentru
+parcurgerea sirului "haystack" si unul pentru 
+detectarea aparitiei subsirului "needle" in sirul
+"haystack".
+Se utilizeaza registrii eax respectiv edi cu
+remarca: intr-un program C eax corespunde lui 'i'
+si edi corespunde lui 'j'.
+Scrierea se face in adresa [ebp+8] (conform
+cerintei) cu ajutorul unui registru auxiliar ebx. 
+-------------------------------------------------
+
+Task5 - bin_to_hex
+_________________________________________________
